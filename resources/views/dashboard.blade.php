@@ -25,7 +25,7 @@
                         @foreach($posts as $post)
                         <tr>
                             <td>{{$post->title}}</td>
-                            <td><a href="{{url ('posts/')}}/{{$post->id}}/edit" class="btn btn-default">Edit</a></ttd>
+                            <td><a href="{{url ('posts/')}}/{{$post->id}}/edit" class="btn btn-default">Edit</a></td>
                             <td>
                                 {!!Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST', 'class' => 'float-right']) !!}
                                     {!!Form::hidden('_method', 'DELETE')!!}
